@@ -1,0 +1,44 @@
+{% load static %}
+
+
+<!DOCTYPE HTML>
+<html>
+<!-- Head -->
+	<head>
+		<title>{% block title %}{% endblock %}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'homePage/assets/css/main.css' %}" />
+		{% block style %}{% endblock %}
+	</head>
+<!-- Body -->
+	<body>
+		{% if messages %}
+			{% for messages in messages%}
+				{{ messages }}	
+			{% endfor %}
+		{% endif %}
+		<!-- Header -->
+			<header id="header">
+				<h1><strong>Nicks</strong><I>Website</h1></I>
+			</header>
+		<!-- Blocked Main Body content -->
+		{% block content %}{% endblock %}
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-facebook"></a></li>
+						<li><a href="#" class="icon fa-twitter"></a></li>
+						<li><a href="https://www.instagram.com/justnicks.clips/" class="icon fa-instagram" target="_blank"></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled</li>
+						<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+						<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+					</ul>
+				</div>
+			</footer>
+		{% block script %}{% endblock %}
+	</body>
+</html>
