@@ -4,7 +4,7 @@
 <html>
 <!-- Head -->
 	<head>
-		{% block title %}Home{% endblock %}
+		{% block title %}Nicks Portfolio{% endblock %}
 		{% block style %}
 			<style type="text/css">
 				/* The Modal (background) */
@@ -54,10 +54,13 @@
 			<!-- Banner -->
 				<section id="banner">
 					<h2>Nick Felix</h2>
-					<p>Welcome to my Website. <br /> I am a fullstack developer and here is a short<br/> description of me.</p>
+					<p>Welcome to my Website. <br/> I am a fullstack developer and here is a short<br/> description of me.</p>
 					<ul class="actions">
 						<li>
-							<a href="#" class="button special big">View My Resume</a>
+							<a href="{% static 'homePage/NICK-FELIX-RESUME.pdf' %}" target="_blank" class="button special big">
+								View My Resume
+							</a>
+
 						</li>
 					</ul>
 				</section>
@@ -195,7 +198,6 @@
 						<div class="container">
 							<header class="major">
 								<h2>Contact ME!</h2>
-								<p>send an email</p>
 							</header>
 							<ul class="actions">
 								<li><a href="mailto: nickfelix.1997@gmail.com" class="button special big">Send an Email</a></li>
